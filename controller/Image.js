@@ -18,8 +18,9 @@ exports.get = async function (req, res, next) {
 
 exports.Image_upload = async function (req, res, next) {
     try {
+
         var data = {
-            Image: req.files[0].path,
+            Image: `https://demo-7411.onrender.com/${req.files[0].path}`,
         };
 
         var tag = await ImageModel.create(data);
